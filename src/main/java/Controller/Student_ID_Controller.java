@@ -19,10 +19,16 @@ public class Student_ID_Controller implements ActionListener
 	
 	public void StudentID(String srcode)
 	{
+		
+		
 		query.studentProfile(srcode);
 		query.getPicture(srcode);
-		id.Namelbl.setText(query.getFullname());
+		
+		id.Namelbl.setText(query.getFullname().toUpperCase());
 		id.StudentCode.setText(query.getSrcode());
+		id.Address.setText(query.getAddress());
+		id.EmergencyC.setText(query.getEmergency_contact_person().toUpperCase() + " / " + query.getEmergency_contact());
+		id.lblBlood.setText(query.getBlood_type());
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {

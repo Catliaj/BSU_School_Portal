@@ -14,6 +14,7 @@ import javax.swing.border.LineBorder;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import Controller.StudentLoginController;
+import Controller.LogInMenuController;
 
 public class Student_Login extends JFrame {
 
@@ -39,10 +40,6 @@ public class Student_Login extends JFrame {
 					System.setProperty("prism.lcdtext", "true");
 					System.setProperty("prism.text", "t2k");
 					System.setProperty("prism.subpixeltext", "true");
-					System.setProperty("awt.useSystemAAFontSettings", "on");
-					System.setProperty("swing.aatext", "true");
-					UIManager.put("Label.font", new Font("Arial", Font.PLAIN, 16));
-					UIManager.put("Button.font", new Font("Arial", Font.BOLD, 16));
 
 					Student_Login frame = new Student_Login();
 					frame.setVisible(true);
@@ -105,7 +102,7 @@ public class Student_Login extends JFrame {
 	
 		contentPane.add(SignIn_btn);
 		
-	    Register_btn = new JButton("REGISTER");
+	    Register_btn = new JButton("EXIT");
 		Register_btn.setForeground(new Color(239, 238, 233));
 		Register_btn.setFont(new Font("Arial", Font.BOLD, 18));
 		Register_btn.setBorder(new LineBorder(new Color(79, 15, 15), 4));
@@ -139,6 +136,9 @@ public class Student_Login extends JFrame {
 		// Controller
 		StudentLoginController studentLoginController = new StudentLoginController(this);
 		SignIn_btn.addActionListener(studentLoginController);
+		
+		LogInMenuController exit = new LogInMenuController(this);
+		Register_btn.addActionListener(exit);
 		
 		setLocationRelativeTo(null);
 		setVisible(true);

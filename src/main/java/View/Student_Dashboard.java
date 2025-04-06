@@ -39,7 +39,7 @@ public class Student_Dashboard extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					System.setProperty("sun.java2d.uiScale", "1"); // Adjust scaling
+					System.setProperty("sun.java2d.uiScale", "1.5"); // Adjust scaling
 					System.setProperty("awt.useSystemAAFontSettings", "on");
 					System.setProperty("swing.aatext", "true");
 					System.setProperty("prism.lcdtext", "true");
