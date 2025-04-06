@@ -14,13 +14,14 @@ import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import Controller.DashboardStudentProfileController;
 import Controller.Education_Leadership_LoginController;
+import Controller.LogInMenuController;
 public class PC_Login extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	public JTextField textField;
 	public JPasswordField passwordField;
-	public JButton SignIn_btn;
+	public JButton SignIn_btn, Register_btn;
 
 	/**
 	 * Launch the application.
@@ -111,8 +112,16 @@ public class PC_Login extends JFrame {
 		SignIn_btn.setFont(new Font("Arial", Font.BOLD, 18));
 		SignIn_btn.setBorder(new LineBorder(new Color(7, 49, 71), 4));
 		SignIn_btn.setBackground(new Color(46, 91, 142));
-		SignIn_btn.setBounds(323, 445, 137, 45);
+		SignIn_btn.setBounds(323, 428, 137, 45);
 		contentPane.add(SignIn_btn);
+		
+		Register_btn = new JButton("EXIT");
+		Register_btn.setForeground(new Color(239, 238, 233));
+		Register_btn.setFont(new Font("Arial", Font.BOLD, 18));
+		Register_btn.setBorder(new LineBorder(new Color(7, 49, 71), 4));
+		Register_btn.setBackground(new Color(46, 91, 142));
+		Register_btn.setBounds(323, 483, 137, 45);
+		contentPane.add(Register_btn);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(PC_Login.class.getResource("/Resources/ProgramChair_Login.png")));
@@ -122,8 +131,11 @@ public class PC_Login extends JFrame {
 	    Education_Leadership_LoginController elc = new Education_Leadership_LoginController(null, this, null);
 	    SignIn_btn.addActionListener(elc);
 	    
-	    setLocationRelativeTo(null);
-	    setVisible(true);
+	    LogInMenuController exit = new LogInMenuController(this);
+		Register_btn.addActionListener(exit);
+		
+		setLocationRelativeTo(null);
+		setVisible(true);
 	}
 
 }

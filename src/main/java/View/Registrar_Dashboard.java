@@ -213,7 +213,10 @@ public class Registrar_Dashboard extends JFrame {
 		panel.add(btn_PreviousReq);
 		
 		Registrar_Dashboard_Controller controller = new Registrar_Dashboard_Controller(this);
+		btn_SignOut.addActionListener(controller);
 		controller.deanProfile(email);
+		
+		
 		setLocationRelativeTo(null);
 		setVisible(true);
 		

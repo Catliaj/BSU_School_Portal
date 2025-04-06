@@ -22,7 +22,9 @@ public class Student_ID extends JFrame {
 	public JLabel Picture;
 	public JLabel QRCODE;
 	public JLabel Signature;
-
+	public JLabel Address;
+	public JLabel EmergencyC;
+	public JLabel lblBlood;
 	/**
 	 * Launch the application.
 	 */
@@ -59,7 +61,7 @@ public class Student_ID extends JFrame {
 	}
 
 	public Student_ID(String Srcode) {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 1020, 726);
 		contentPane = 
 				
@@ -163,7 +165,7 @@ public class Student_ID extends JFrame {
 		contentPane.add(lblLeadingInnovationsTransforming);
 		
 		Signature = new JLabel("");
-		Signature.setBounds(568, 300, 208, 59);
+		Signature.setBounds(578, 300, 208, 59);
 		contentPane.add(Signature);
 		
 		JLabel EmergCont = new JLabel("AUTHORIZED SIGNATURE");
@@ -184,7 +186,7 @@ public class Student_ID extends JFrame {
 		lblAddress.setBounds(541, 369, 59, 24);
 		contentPane.add(lblAddress);
 		
-		JLabel Address = new JLabel("NARRA 1 ST. MALARUHATAN LIAN, BATANGAS");
+		Address = new JLabel("NARRA 1 ST. MALARUHATAN LIAN, BATANGAS");
 		Address.setForeground(Color.BLACK);
 		Address.setFont(new Font("Segoe UI Black", Font.BOLD, 9));
 		Address.setBounds(578, 376, 306, 40);
@@ -196,7 +198,7 @@ public class Student_ID extends JFrame {
 		lblEmergencyContact.setBounds(541, 403, 116, 24);
 		contentPane.add(lblEmergencyContact);
 		
-		JLabel EmergencyC = new JLabel("Yasmin Felicisimo / 099764339632");
+		EmergencyC = new JLabel("Yasmin Felicisimo / 099764339632");
 		EmergencyC.setForeground(Color.BLACK);
 		EmergencyC.setFont(new Font("Segoe UI Black", Font.BOLD, 9));
 		EmergencyC.setBounds(636, 399, 306, 32);
@@ -208,7 +210,7 @@ public class Student_ID extends JFrame {
 		lblBloodType.setBounds(541, 419, 99, 24);
 		contentPane.add(lblBloodType);
 		
-		JLabel lblBlood = new JLabel("O+");
+		lblBlood = new JLabel("O+");
 		lblBlood.setForeground(Color.BLACK);
 		lblBlood.setFont(new Font("Segoe UI Black", Font.BOLD, 9));
 		lblBlood.setBounds(641, 423, 28, 19);

@@ -14,13 +14,14 @@ import javax.swing.border.LineBorder;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import Controller.Education_Leadership_LoginController;
+import Controller.LogInMenuController;
 public class Dean_Login extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	public JTextField textField;
 	public JPasswordField passwordField;
-	public JButton SignIn_btn;
+	public JButton SignIn_btn, Register_btn;
 
 	/**
 	 * Launch the application.
@@ -111,8 +112,16 @@ public class Dean_Login extends JFrame {
 		SignIn_btn.setFont(new Font("Arial", Font.BOLD, 18));
 		SignIn_btn.setBorder(new LineBorder(new Color(147, 55, 5), 4));
 		SignIn_btn.setBackground(new Color(218, 98, 32));
-		SignIn_btn.setBounds(325, 440, 137, 45);
+		SignIn_btn.setBounds(325, 428, 137, 45);
 		contentPane.add(SignIn_btn);
+		
+		Register_btn = new JButton("EXIT");
+		Register_btn.setForeground(new Color(239, 238, 233));
+		Register_btn.setFont(new Font("Arial", Font.BOLD, 18));
+		Register_btn.setBorder(new LineBorder(new Color(147, 55, 5), 4));
+		Register_btn.setBackground(new Color(218, 98, 32));
+		Register_btn.setBounds(323, 483, 137, 45);
+		contentPane.add(Register_btn);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(Dean_Login.class.getResource("/Resources/Dean_Login.png")));
@@ -121,6 +130,11 @@ public class Dean_Login extends JFrame {
 
 		Education_Leadership_LoginController elc = new Education_Leadership_LoginController(this, null, null);
 		SignIn_btn.addActionListener(elc);
+		
+		LogInMenuController exit = new LogInMenuController(this);
+		Register_btn.addActionListener(exit);
+		
+		
 		
 		setVisible(true);
 		setLocationRelativeTo(null);

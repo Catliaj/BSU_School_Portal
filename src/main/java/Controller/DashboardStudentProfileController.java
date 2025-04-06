@@ -48,7 +48,7 @@ public class DashboardStudentProfileController implements ActionListener
     }
     
 	public void changecolorfontenrollmentstatus() {
-		if (dashboardStudentProfileQuery.getEnrollment_status().equals("Enrolled")) {
+		if (dashboardStudentProfileQuery.getEnrollment_status().equals("ENROLLED")) {
 			student_dashboard.lbl_Enrollment_Status.setForeground(new Color(0, 128, 0));
 		} else {
 			student_dashboard.lbl_Enrollment_Status.setForeground(new Color(255, 0, 0));

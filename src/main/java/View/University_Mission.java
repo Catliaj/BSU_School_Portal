@@ -3,6 +3,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -47,6 +48,9 @@ public class University_Mission extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+	
+		
 		
 		JLabel lblNewLabel_1 = new JLabel("University Mission");
 		lblNewLabel_1.setForeground(new Color(255, 255, 255));
